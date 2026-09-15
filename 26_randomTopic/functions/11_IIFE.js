@@ -11,7 +11,7 @@
 1.Functions as Values
 Create a function greet() and store it in another variable. Execute the function using the new variable.
 
-2.Callback Function
+2.Callback Function  
 Create a calculate(a, b, operation) function that accepts two numbers and a callback. Use it for addition, subtraction, and multiplication.
 
 3.Higher-Order Function

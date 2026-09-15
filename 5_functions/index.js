@@ -6,7 +6,7 @@ syntax :--  function  function_name(){ code }
 */
 
 
-// function defination
+// // function defination  or declaation
 // function sayMyName(){
 //     console.log("love babbar");
 // }
@@ -16,18 +16,18 @@ syntax :--  function  function_name(){ code }
 // sayMyName();
 
 
-// function printNumber(num){
-//     console.log("printing number",num);
+// function greet(name){
+//     console.log("Good Morning !",name);
 // }
 
-// printNumber(5);
+// printNumber("sakshi");
 
 // function getAverage(num1,num2){
 //     let avg=(num1+num2)/2;
 //     console.log("Average is",avg);
 // }
-// getAverage(12,34);
-
+// let answer=getAverage(12,34);
+// console.log(answer);
 
 // function getSum(a,b,c){
 //     let sum=a+b+c;
@@ -37,14 +37,20 @@ syntax :--  function  function_name(){ code }
 // let ans=getSum(1,2,3);
 // console.log("print sum ans",ans);
 
+// if(ans<10){
+//   console.log("smaller than 10");
+// }else{
+//   console.log("greater than 10");
+// }
+
 // function getMyName(firstname,lastname){
 //     let fullName=firstname+lastname;
 //     return fullName;
 // }
-// let ans =getMyName("Soumay ","Choudhary");
+// let ans =getMyName("Soumay","Choudhary");
 // console.log(ans);
 
-// let squareNumber =function(num){
+// let squareNumber = function (num){
 //     let ans = num**2;
 //     return ans;
 // }
