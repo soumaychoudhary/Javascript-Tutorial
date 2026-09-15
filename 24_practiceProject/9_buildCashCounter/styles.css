@@ -1,0 +1,68 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    height:100%;
+    width:100%;
+    background: linear-gradient(to left , rgb(119, 230, 245) , rgb(236, 141, 156) );
+    color: white;
+
+}
+
+h1{
+  position: absolute;
+  top: 0;
+  left: 39%;
+  text-align: center;
+  color: black;
+}
+
+#change-due{
+  border: none;
+  color : brown;
+}
+
+.container{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding : 10px;
+  background : linear-gradient(to right,rgb(117, 117, 234),rgb(241, 88, 241));
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 200px;
+  height: auto;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+}
+
+ 
+
+.container label{
+  color: brown;
+}
+
+#cash{
+  border: 3px solid lightseagreen;
+  height: 30px;
+  border-radius: 8px;
+}
+
+#purchase-btn{
+  background:  linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+
