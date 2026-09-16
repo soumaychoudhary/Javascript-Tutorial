@@ -5,9 +5,9 @@ function greet(name) {
     console.log("Hello " + name);
 }
 
-function execute(fn) {
-    fn("Rahul");
-}
+function execute(x,y,fn) {          
+    fn("Rahul");      
+}                         
 
 execute(greet);    // "Give the greet function to execute."
 execute(greet());  // Execute greet first and give its returned value to execute.
@@ -29,13 +29,13 @@ execute calls greet()
 */
 
 
-console.log("Start");
+// console.log("Start");
 
-setTimeout(function () {
-    console.log("Hello after 2 seconds");
-}, 2000);
+// setTimeout(function () {
+//     console.log("Hello after 2 seconds");
+// }, 2000);
 
-console.log("End");
+// console.log("End");
 
 /**
 The callback basically means:
@@ -70,3 +70,17 @@ This is a very good bridge to asynchronous JavaScript.
 //         bar();
 //     }
 // }
+
+
+/*
+role: Consider your self as a technical professional teacher.
+
+action: your task is to teach me callback function and closers in javascript with example 
+so that i can get a good understanding of it.
+
+context: Nowadays, I am learning a javascript language so i am beginner in it so consider these in mind.
+
+expectation: i expect from you is that your response will give me a good understanding of these topic so that in industry i can use it very well . 
+
+tone: Kindly maintain the professional yet easy tone so that i dont face any issue while reading your response.
+*/

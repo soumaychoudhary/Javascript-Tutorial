@@ -13,3 +13,4 @@ function doSomething(){
 }
 
 doSomething();
+console.log(x,y,z);
