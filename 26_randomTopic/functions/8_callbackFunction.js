@@ -1,21 +1,32 @@
 // we can pass function as a parameter
 
 
-function greet(name) {
-    console.log("Hello " + name);
-}
+// function greet(name) {
+//     console.log("Hello " + name);
+// }
 
-function execute(x,y,fn) {          
-    fn("Rahul");      
-}                         
+// function execute(fn) {          
+//     fn("Rahul");      
+// }                         
 
-execute(greet);    // "Give the greet function to execute."
-execute(greet());  // Execute greet first and give its returned value to execute.
+// execute(greet);    // "Give the greet function to execute."
+// execute(greet("rahul"));  // Execute greet first and give its returned value to execute.
 
 //Since a function can be passed to another function, JavaScript allows us to build something called a callback function.
 
 // A callback is a function that is passed to another function as an argument and is called later by that function.
 
+function showAddition(sum) {
+    if(sum>50) console.log("greater than 50");
+    else console.log("Less than 50");
+    console.log("The Addition is : " + sum);
+}
+function add(x,y,fn) {  
+    let add=x+y;       
+    fn(add);      
+}  
+
+add(12,23,showAddition);
 /*
 
 greet

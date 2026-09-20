@@ -1,5 +1,5 @@
 // IIFE(immediately invoked function expression) :- it ia function expression thats where the code inside the function gets 
-//                                                  executed immediately after it has been define . 
+//executed immediately after it has been define . 
 
 (function (){  // string representation of the function
    console.log("hello world") 
