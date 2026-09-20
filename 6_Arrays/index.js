@@ -38,34 +38,197 @@ objects :- collection of key value pairs.
 // let arr=[1,2,3,4,5];
 // console.log(arr);
 
-// // array constructor
+////////// ACCESSING ARRAY ELEMENT //////////////////
+// arr[0]=10;
+// console.log(arr);
+/*
+
+////////////////////////  array constructor  /////////////////////
 // let brr=new Array('love',1,true);
 // console.log(brr);
 
-// // built - in method :---- push,pop,shift,unshift,slice,splice,map,filter,reduce,sort,indexof,find
 
+####################### Array Elements Can Be Objects ####################
+JavaScript variables can be objects. Arrays are special kinds of objects.
+Because of this, you can have variables of different types in the same Array.
+You can have objects in an Array. You can have functions in an Array.
+
+
+                 JavaScript Values
+                       |
+              -------------------
+              |                 |
+          Primitives          Objects(non-primative)
+              |                 |
+       String, Number,       Object, Array,
+       Boolean, etc.         Function, etc.
+                                  |
+                             Callable
+                               object
+
+*/
+// A mixed-type JavaScript array
+// const mixedArray = [
+//   42,                                       // 1. Number
+//   "Hello, world!",                         // 2. String
+//   {                                        // 3. Object
+//     name: "Alice", 
+//     role: "Developer", 
+//   },     
+//   function(greeting) {                      // 4. Function
+//     return `${greeting}, from inside the array!`;
+//   }
+// ];
+
+// // --- How to access and use each element ---
+
+// // 1. Access the number
+// console.log(mixedArray[0]); 
+// // Output: 42
+
+// // 2. Access the string
+// console.log(mixedArray[1]); 
+// // Output: Hello, world!
+
+// // 3. Access a property inside the object
+// console.log(mixedArray[2].name); 
+// // Output: Alice
+
+// // 4. Invoke the function and pass an argument
+// const functionResult = mixedArray[3]("Hi");
+// console.log(functionResult); 
+// // Output: Hi, from inside the array!
+
+
+
+
+
+// // built - in method :---- push,pop,shift,unshift,slice,splice,map,filter,reduce,sort,indexof,find
+// let brr=new Array('love',1,true);
+// console.log(brr);
+///////////////////////// PUSH AND POP METHOD  /////////////////////
 // brr.push("babbar");
 // console.log(brr);
 // brr.pop();
 // console.log(brr);
 
-// brr.shift();
+//////////////////////// SHIFT VS UNSHIFT METHOD ////////////////
+
+// brr.shift();         // DELETE FROM FIRST
 // console.log(brr);
-// brr.unshift("love babbar")
+// brr.unshift("love babbar");    // INSERT FROM FIRST
 // brr.push(20);
 // brr.push(40);
 // brr.push(70);
 // console.log(brr);
-// brr.slice(1,3);
+
+////////////////////////// Slice method ///////////////////
+// let ans=brr.slice(1,3);  //  start end-1    it returns section of copy of array
+// console.log(ans);
+
+////////////////////////splice method ///////////////////////
+// brr.splice(1,1,"kunal");    // start countnumbertodelete  inserting value 
 // console.log(brr);
 
-// brr.splice(1,2,"kunal");
-// console.log(brr);
+////////////////// toString method ///////////
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const fruitsstring = fruits.toString();
+// console.log(fruitsstring);
 
 
-// map filter and reduce
+//////////////////////  Length property ///////////
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let length = fruits.length;
+// console.log(length);
 
-// map :-- 
+////////////////////// sort method and toSorted ////////////////// 
+
+// const numbers=[23,45,1,3,67];
+// let ordered = numbers.sort();
+
+// console.log(ordered);   // [1, 23, 3, 45, 67]
+
+/**
+ The reason you are getting [1, 23, 3, 45, 67] is because, by default, JavaScript's .sort() method converts elements into strings and compares their UTF-16 code unit values (alphabetical order).In alphabetical sorting, "23" comes before "3" because "2" is smaller than "3", just like "Apple" comes before "Banana".
+ */
+
+
+//// Ascending Order (Smallest to Largest)
+// let orderedAsc = numbers.sort((a, b) => a - b);
+// console.log(orderedAsc); 
+// // Output: [ 1, 3, 23, 45, 67 ]
+
+// // Descending Order (Largest to Smallest)
+// let orderedDesc = numbers.sort((a, b) => b - a);
+// console.log(orderedDesc); 
+// // Output: [ 67, 45, 23, 3, 1 ]
+
+
+////////////////////////// at method //////////////////////
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let fruit = fruits.at(2);
+// console.log(fruit);
+
+//////////////////////   join method  /////////////////////
+/*
+The join() method also joins all array elements into a string.
+It behaves just like toString(), but in addition you can specify the separator:
+*/
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const fruitstr=fruits.join(",");
+// console.log(fruitstr);
+
+//////////////////////// concat method //////////////////////
+// const myGirls = ["Cecilie", "Lone"];
+// const myBoys = ["Emil", "Tobias", "Linus"];
+
+// const myChildren = myGirls.concat(myBoys);
+// console.log(myChildern);
+
+///////////////////////// reverse and toReversed ////////////////////
+// const months = ["Jan", "Feb", "Mar", "Apr"];
+// const reversed = months.toReversed();
+// console.log(reversed);
+// const numbers=[23,45,1,4,67];
+// console.log(numbers.reverse())
+
+//////////////////// Array.from()//////////////////////
+// let text = "ABCDEFG";
+// let textarray=Array.from(text);
+// console.log(textarray);
+
+
+/////////////////// type of array ///////////////////////
+
+// const fruits = ["Banana", "Orange", "Apple"];
+// let type = typeof fruits;
+// console.log(type);
+
+// const isarray = Array.isArray(fruits);
+// console.log(isarray);
+
+
+//////////////////////////////  Array Searching //////////////////
+
+// 1. include method
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.includes("Mango"); // is true
+
+
+// 2. find method (important)
+// const numbers = [4, 9, 16, 25, 29];
+// let first = numbers.find(myFunction);  //Returns the value of the first element in the array where predicate is true, and undefined otherwise.
+
+// function myFunction(value, index, array) {
+//   return value > 18;
+// }
+// console.log(first);
+
+
+///////////////////////////  Some higher order functions ///////////////////
+
+// 1. map :-- 
 // let arr=[10,20,30];
 
 // let ansArray=arr.map((number) =>{
@@ -78,7 +241,7 @@ objects :- collection of key value pairs.
 //     console.log(number,index);
 // })
 
-//filter :--
+// 2. filter :--
 
 // let arr=[10,20,30,11,21,44,51];
 // let evenArray=arr.filter((number) =>{
@@ -92,7 +255,7 @@ objects :- collection of key value pairs.
 
 // console.log(evenArray);
 
-// reduce :---
+// 3. reduce :---
 
 // let arr=[10,20,30,40];
 // let ans=arr.reduce((acc,curr)=>{
@@ -101,20 +264,32 @@ objects :- collection of key value pairs.
 
 // console.log(ans);
 
-// for - each
+// 4. every :---
+// const numbers = [45, 4, 9, 16, 25];
+// let allOver18 = numbers.every(myFunction);
+
+// function myFunction(value, index, array) {
+//   return value > 18;
+// }
+// console.log(allOver18);
+
+
+////////////////////// Some special loops in array //////////////////
+
+// for - each  
 
 // let arr=[10,20,30];
 // arr.forEach((value,index)=>{
 //     console.log("number: ",value,"index: ",index);
 // })
 
-// for-in
+// for-in      // return index of array also know as keys
 
 // for(let key in obj){
 //     console.log(key);
 // }
 
-// for-of
+// for-of  // return values of array
 
 // let fullName="babbar";
 // for(let val of fullName){
@@ -138,3 +313,30 @@ objects :- collection of key value pairs.
 // console.log(totalSum);
 
 
+////////////////////// ADVANCE OPERATORS ////////////////////
+/*
+javaScript Array Spread (...)
+The ... operator expands an array into individual elements.
+
+This can be used join arrays:
+*/
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+
+// const arr3 = [...arr1, ...arr2];
+// console.log(arr3);
+
+// const arr1 = [1, 2, 3];
+// const arr2 = [...arr1];    // copying
+
+/**
+JavaScript Array Rest (...)
+The rest operator (...) allows us to destruct an array and collect the leftovers:
+ */
+
+// let a, rest;
+// const arr1 = [1,2,3,4,5,6,7,8];
+
+// [a, ...rest] = arr1;     // also know as destructuring
+// console.log(a);
+// console.log(rest);
