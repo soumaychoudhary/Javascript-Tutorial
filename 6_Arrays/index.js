@@ -8,7 +8,10 @@ objects :- collection of key value pairs.
                         name : "love",
                         age : 25,
                         weight : 85,
-                        walk(){}
+                        iseligible : True,
+                        walk : function(){
+                         console.log("walking");
+                        }
                     };
 
 */
@@ -26,6 +29,10 @@ objects :- collection of key value pairs.
 
 // console.log(obj);
 // obj.greet();
+// let Greet = obj.greet();
+// console.log(Greet);
+// let Name = obj.name;
+// console.log(Name);
 
 // console.log(typeof(obj));
 
@@ -40,14 +47,14 @@ objects :- collection of key value pairs.
 
 ////////// ACCESSING ARRAY ELEMENT //////////////////
 // arr[0]=10;
-// console.log(arr);
-/*
+// console.log(arr[4]);
+
 
 ////////////////////////  array constructor  /////////////////////
 // let brr=new Array('love',1,true);
 // console.log(brr);
 
-
+/*
 ####################### Array Elements Can Be Objects ####################
 JavaScript variables can be objects. Arrays are special kinds of objects.
 Because of this, you can have variables of different types in the same Array.
@@ -73,7 +80,10 @@ You can have objects in an Array. You can have functions in an Array.
 //   "Hello, world!",                         // 2. String
 //   {                                        // 3. Object
 //     name: "Alice", 
-//     role: "Developer", 
+//     role: "Developer",
+//     marks:[
+//         12,13,14,15
+//     ] 
 //   },     
 //   function(greeting) {                      // 4. Function
 //     return `${greeting}, from inside the array!`;
@@ -91,7 +101,7 @@ You can have objects in an Array. You can have functions in an Array.
 // // Output: Hello, world!
 
 // // 3. Access a property inside the object
-// console.log(mixedArray[2].name); 
+// console.log(mixedArray[2].marks[0]);   // 12
 // // Output: Alice
 
 // // 4. Invoke the function and pass an argument
