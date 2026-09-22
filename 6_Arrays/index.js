@@ -85,8 +85,8 @@ You can have objects in an Array. You can have functions in an Array.
 //         12,13,14,15
 //     ] 
 //   },     
-//   function(greeting) {                      // 4. Function
-//     return `${greeting}, from inside the array!`;
+//   function() {                      // 4. Function
+//     console.log("Hello");
 //   }
 // ];
 
@@ -105,8 +105,7 @@ You can have objects in an Array. You can have functions in an Array.
 // // Output: Alice
 
 // // 4. Invoke the function and pass an argument
-// const functionResult = mixedArray[3]("Hi");
-// console.log(functionResult); 
+// console.log(mixedArray[3]()); 
 // // Output: Hi, from inside the array!
 
 
@@ -133,12 +132,20 @@ You can have objects in an Array. You can have functions in an Array.
 // console.log(brr);
 
 ////////////////////////// Slice method ///////////////////
+// let brr=new Array('love',10,true,23);
+// console.log(brr);
 // let ans=brr.slice(1,3);  //  start end-1    it returns section of copy of array
 // console.log(ans);
 
 ////////////////////////splice method ///////////////////////
-// brr.splice(1,1,"kunal");    // start countnumbertodelete  inserting value 
+// let brr=new Array('love',10,true,23);
 // console.log(brr);
+// brr.splice(0,3,"kunal");    // start countnumbertodelete  insertingvalue 
+// console.log(brr);
+
+// brr.splice(0,3);    // start countnumbertodelete  insertingvalue 
+// console.log(brr);
+
 
 ////////////////// toString method ///////////
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -157,13 +164,12 @@ You can have objects in an Array. You can have functions in an Array.
 // let ordered = numbers.sort();
 
 // console.log(ordered);   // [1, 23, 3, 45, 67]
-
 /**
  The reason you are getting [1, 23, 3, 45, 67] is because, by default, JavaScript's .sort() method converts elements into strings and compares their UTF-16 code unit values (alphabetical order).In alphabetical sorting, "23" comes before "3" because "2" is smaller than "3", just like "Apple" comes before "Banana".
  */
 
 
-//// Ascending Order (Smallest to Largest)
+// // Ascending Order (Smallest to Largest)
 // let orderedAsc = numbers.sort((a, b) => a - b);
 // console.log(orderedAsc); 
 // // Output: [ 1, 3, 23, 45, 67 ]
@@ -193,14 +199,17 @@ It behaves just like toString(), but in addition you can specify the separator:
 // const myBoys = ["Emil", "Tobias", "Linus"];
 
 // const myChildren = myGirls.concat(myBoys);
-// console.log(myChildern);
+// console.log(myChildren);
+// console.log(myGirls);
 
 ///////////////////////// reverse and toReversed ////////////////////
 // const months = ["Jan", "Feb", "Mar", "Apr"];
 // const reversed = months.toReversed();
 // console.log(reversed);
+// console.log(months);
 // const numbers=[23,45,1,4,67];
-// console.log(numbers.reverse())
+// console.log(numbers.reverse());
+// console.log(numbers);
 
 //////////////////// Array.from()//////////////////////
 // let text = "ABCDEFG";
