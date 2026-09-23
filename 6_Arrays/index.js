@@ -38,8 +38,6 @@ objects :- collection of key value pairs.
 
 // let obj2=obj;
 
-
-
 // array :--
 
 // let arr=[1,2,3,4,5];
@@ -48,7 +46,6 @@ objects :- collection of key value pairs.
 ////////// ACCESSING ARRAY ELEMENT //////////////////
 // arr[0]=10;
 // console.log(arr[4]);
-
 
 ////////////////////////  array constructor  /////////////////////
 // let brr=new Array('love',1,true);
@@ -79,12 +76,12 @@ You can have objects in an Array. You can have functions in an Array.
 //   42,                                       // 1. Number
 //   "Hello, world!",                         // 2. String
 //   {                                        // 3. Object
-//     name: "Alice", 
+//     name: "Alice",
 //     role: "Developer",
 //     marks:[
 //         12,13,14,15
-//     ] 
-//   },     
+//     ]
+//   },
 //   function() {                      // 4. Function
 //     console.log("Hello");
 //   }
@@ -93,11 +90,11 @@ You can have objects in an Array. You can have functions in an Array.
 // // --- How to access and use each element ---
 
 // // 1. Access the number
-// console.log(mixedArray[0]); 
+// console.log(mixedArray[0]);
 // // Output: 42
 
 // // 2. Access the string
-// console.log(mixedArray[1]); 
+// console.log(mixedArray[1]);
 // // Output: Hello, world!
 
 // // 3. Access a property inside the object
@@ -105,12 +102,8 @@ You can have objects in an Array. You can have functions in an Array.
 // // Output: Alice
 
 // // 4. Invoke the function and pass an argument
-// console.log(mixedArray[3]()); 
+// console.log(mixedArray[3]());
 // // Output: Hi, from inside the array!
-
-
-
-
 
 // // built - in method :---- push,pop,shift,unshift,slice,splice,map,filter,reduce,sort,indexof,find
 // let brr=new Array('love',1,true);
@@ -140,25 +133,23 @@ You can have objects in an Array. You can have functions in an Array.
 ////////////////////////splice method ///////////////////////
 // let brr=new Array('love',10,true,23);
 // console.log(brr);
-// brr.splice(0,3,"kunal");    // start countnumbertodelete  insertingvalue 
+// brr.splice(0,3,"kunal");    // start countnumbertodelete  insertingvalue
 // console.log(brr);
 
-// brr.splice(0,3);    // start countnumbertodelete  insertingvalue 
+// brr.splice(0,3);    // start countnumbertodelete  insertingvalue
 // console.log(brr);
-
 
 ////////////////// toString method ///////////
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // const fruitsstring = fruits.toString();
 // console.log(fruitsstring);
 
-
 //////////////////////  Length property ///////////
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // let length = fruits.length;
 // console.log(length);
 
-////////////////////// sort method and toSorted ////////////////// 
+////////////////////// sort method and toSorted //////////////////
 
 // const numbers=[23,45,1,3,67];
 // let ordered = numbers.sort();
@@ -168,17 +159,15 @@ You can have objects in an Array. You can have functions in an Array.
  The reason you are getting [1, 23, 3, 45, 67] is because, by default, JavaScript's .sort() method converts elements into strings and compares their UTF-16 code unit values (alphabetical order).In alphabetical sorting, "23" comes before "3" because "2" is smaller than "3", just like "Apple" comes before "Banana".
  */
 
-
 // // Ascending Order (Smallest to Largest)
 // let orderedAsc = numbers.sort((a, b) => a - b);
-// console.log(orderedAsc); 
+// console.log(orderedAsc);
 // // Output: [ 1, 3, 23, 45, 67 ]
 
 // // Descending Order (Largest to Smallest)
 // let orderedDesc = numbers.sort((a, b) => b - a);
-// console.log(orderedDesc); 
+// console.log(orderedDesc);
 // // Output: [ 67, 45, 23, 3, 1 ]
-
 
 ////////////////////////// at method //////////////////////
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -216,7 +205,6 @@ It behaves just like toString(), but in addition you can specify the separator:
 // let textarray=Array.from(text);
 // console.log(textarray);
 
-
 /////////////////// type of array ///////////////////////
 
 // const fruits = ["Banana", "Orange", "Apple"];
@@ -226,7 +214,6 @@ It behaves just like toString(), but in addition you can specify the separator:
 // const isarray = Array.isArray(fruits);
 // console.log(isarray);
 
-
 //////////////////////////////  Array Searching //////////////////
 
 // 1. include method
@@ -234,20 +221,24 @@ It behaves just like toString(), but in addition you can specify the separator:
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // fruits.includes("Mango"); // is true
 
-
 // 2. find method (important)
 // const numbers = [4, 9, 16, 25, 29];
 // let first = numbers.find(myFunction);  //Returns the value of the first element in the array where predicate is true, and undefined otherwise.
 
-// function myFunction(value, index, array) {
+// function myFunction(value,index,array) {
 //   return value > 18;
 // }
 // console.log(first);
 
+// let first =numbers.find((value,index,array)=>{
+//     return value > 18;
+// })
+// console.log(first);
 
 ///////////////////////////  Some higher order functions ///////////////////
 
-// 1. map :-- 
+// 1. map :--  it is higher order function which is used to perform transformation in array .
+
 // let arr=[10,20,30];
 
 // let ansArray=arr.map((number) =>{
@@ -260,7 +251,7 @@ It behaves just like toString(), but in addition you can specify the separator:
 //     console.log(number,index);
 // })
 
-// 2. filter :--
+// 2. filter :-- it is used t filter elements based on condition .
 
 // let arr=[10,20,30,11,21,44,51];
 // let evenArray=arr.filter((number) =>{
@@ -274,28 +265,27 @@ It behaves just like toString(), but in addition you can specify the separator:
 
 // console.log(evenArray);
 
-// 3. reduce :---
+// 3. reduce :--- it used perform mathematical operation on the array. it always return a single value unlike other higher order function .
 
 // let arr=[10,20,30,40];
-// let ans=arr.reduce((acc,curr)=>{
+// let ans=arr.reduce((acc,curr)=>{    // here acc is accumulator as well as it is a new parameter and curr is current element
 //     return acc+curr;
 // },0)
 
 // console.log(ans);
 
 // 4. every :---
-// const numbers = [45, 4, 9, 16, 25];
-// let allOver18 = numbers.every(myFunction);
+// const numbers = [45, 40, 19, 169, 25];
+// let allOver18 = numbers.every(myFunction);    // it always return boolean value
 
 // function myFunction(value, index, array) {
 //   return value > 18;
 // }
 // console.log(allOver18);
 
-
 ////////////////////// Some special loops in array //////////////////
 
-// for - each  
+// for - each
 
 // let arr=[10,20,30];
 // arr.forEach((value,index)=>{
@@ -303,7 +293,7 @@ It behaves just like toString(), but in addition you can specify the separator:
 // })
 
 // for-in      // return index of array also know as keys
-
+// let obj=[1,2,3,4]
 // for(let key in obj){
 //     console.log(key);
 // }
@@ -315,8 +305,7 @@ It behaves just like toString(), but in addition you can specify the separator:
 //     console.log(val);
 // }
 
-
-// arrays in function
+//////////////////////////   arrays in function  ///////////////////////////
 
 // let arr=[10,20,30,40,50];
 // function getSum(arr){
@@ -330,7 +319,6 @@ It behaves just like toString(), but in addition you can specify the separator:
 
 // let totalSum=getSum(arr);
 // console.log(totalSum);
-
 
 ////////////////////// ADVANCE OPERATORS ////////////////////
 /*
@@ -346,7 +334,9 @@ This can be used join arrays:
 // console.log(arr3);
 
 // const arr1 = [1, 2, 3];
-// const arr2 = [...arr1];    // copying
+// const arr2 = [...arr1,4];    // copying
+// console.log(arr2);
+// console.log(arr1);
 
 /**
 JavaScript Array Rest (...)
@@ -356,6 +346,19 @@ The rest operator (...) allows us to destruct an array and collect the leftovers
 // let a, rest;
 // const arr1 = [1,2,3,4,5,6,7,8];
 
-// [a, ...rest] = arr1;     // also know as destructuring
+// [a,b, ...rest] = arr1;    
 // console.log(a);
+// console.log(b);
 // console.log(rest);
+
+// const arr2 = [
+//   "soumay",
+//   {
+//     age: 20,
+//     gender: "male",
+//   },
+// ];
+
+// const [Name, details] = arr2;    // also know as destructuring
+// console.log(Name);
+// console.log(details);
