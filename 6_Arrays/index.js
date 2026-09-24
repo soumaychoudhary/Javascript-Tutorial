@@ -357,8 +357,13 @@ The rest operator (...) allows us to destruct an array and collect the leftovers
 //     age: 20,
 //     gender: "male",
 //   },
+//   23
 // ];
 
-// const [Name, details] = arr2;    // also know as destructuring
+// const [Name, details,number] = arr2;    // also know as destructuring
 // console.log(Name);
+// details.phone="874657398";
 // console.log(details);
+
+// arr2[1].phone="63479038205";
+// console.log(arr2[1]);

@@ -3,7 +3,7 @@ What are JavaScript Objects?
 ---Objects are variables that can store both values and functions.
 ---Values are stored as key:value pairs called properties.
 ---Functions are stored as key:function() pairs called methods.
- */
+*/
 
 // Create an Object
 // const person = {
@@ -12,7 +12,7 @@ What are JavaScript Objects?
 //   age: 50,
 //   eyeColor: "blue"
 // };
-// console.log(person)
+// console.log(person);
 
 // Create an Object
 // const person = {};
@@ -22,6 +22,10 @@ What are JavaScript Objects?
 // person.lastName = "Doe";
 // person.age = 50;
 // person.eyeColor = "blue";
+
+// const objstr=JSON.stringify(person);
+// console.log(objstr);
+// console.log(JSON.parse(objstr));
 
 // Create an Object
 // const person = new Object({
@@ -39,7 +43,7 @@ You can access object properties in two ways:
     Dot notation
     Bracket notation
 */
-
+// person.firstName='rahul'
 // person["firstName"]='rahul'
 // console.log(person)
 
@@ -94,3 +98,6 @@ All JavaScript values, except primitives, are objects.
 //   }
 // }
 // console.log(myObj);
+
+
+
