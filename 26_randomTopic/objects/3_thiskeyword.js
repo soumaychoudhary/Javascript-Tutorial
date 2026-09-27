@@ -175,9 +175,8 @@ It takes this from its surrounding lexical scope.
 
 
 /**
-////////////////// One rule you should teach students //////////////////////////
+////////////////// One rule  //////////////////////////
 
-Put this on your board:
     Normal function
       this → determined by how the function is called
     Arrow function
@@ -187,7 +186,7 @@ Put this on your board:
 
 
 /**
-                            `this`
+                    `this`
                        │
           ┌────────────┴────────────┐
           │                         │
