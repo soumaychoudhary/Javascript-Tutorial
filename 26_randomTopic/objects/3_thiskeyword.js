@@ -37,6 +37,8 @@ In a regular function, this also refers to the global object.
 // }
 // console.log(myFunction())
 
+// normal function have their own this
+
 /*
 //////////////// Arrow functions don't have their own this. /////////////
 */
@@ -151,7 +153,7 @@ It takes this from its surrounding lexical scope.
 //     marks: [80, 90, 95],
 
 //     showMarks: function() {
-//         this.marks.map(function(mark) {
+//         this.marks.forEach(function(mark) {
 //             console.log(this.name, mark);
 //         });
 //     }
@@ -204,7 +206,7 @@ It takes this from its surrounding lexical scope.
 
 ////////////////  CALL , APPLY , BIND ////////////////////
 
-// They allow us to control what this refers to when a function runs.
+// They allow us to control what 'this' keyword refers to when a function runs.
 
 // const person1 = {
 //     name: "Rahul"
@@ -222,7 +224,7 @@ It takes this from its surrounding lexical scope.
 // CALL , APPLY
 
 // greet.call(person1);
-
+// greet.apply(person2);
 
 // BIND
 // const person = {
