@@ -5,14 +5,15 @@ A class created with a class inheritance inherits all the methods from another c
  */
 
 /**
-              Vehicle
+            Vehicle(parent)
                 │
         ┌───────┴───────┐
         ↓               ↓
-       Car             Bike
+       Car(child)      Bike(child)
+        
  */
-
-// class Car {
+// class Vehicle{}
+// class Car{
 //   constructor(brand) {
 //     this.carname = brand;
 //   }
@@ -21,7 +22,7 @@ A class created with a class inheritance inherits all the methods from another c
 //   }
 // }
 
-// class Model extends Car {
+// class Model extends Car{
 //   constructor(brand, mod) {
 //     super(brand);
 //     this.model = mod;
@@ -45,82 +46,82 @@ By calling the super() method in the constructor method, we call the parent's co
 
 ///////////////////////////  strong example for proper understanding ///////////////////////////
 
-class Employee {
+// class Employee {
 
-    constructor(name, id, salary) {
-        this.name = name;
-        this.id = id;
-        this.salary = salary;
-    }
+//     constructor(name, id, salary) {
+//         this.name = name;
+//         this.id = id;
+//         this.salary = salary;
+//     }
 
-    login() {
-        console.log(`${this.name} logged in`);
-    }
+//     login() {
+//         console.log(`${this.name} logged in`);
+//     }
 
-    logout() {
-        console.log(`${this.name} logged out`);
-    }
+//     logout() {
+//         console.log(`${this.name} logged out`);
+//     }
 
-    displayInfo() {
-        console.log(
-            `${this.id} - ${this.name} - ₹${this.salary}`
-        );
-    }
-}
+//     displayInfo() {
+//         console.log(
+//             `${this.id} - ${this.name} - ₹${this.salary}`
+//         );
+//     }
+// }
 
-class Developer extends Employee {
+// class Developer extends Employee {
 
-    constructor(name, id, salary, language) {
+//     constructor(name, id, salary, language) {
 
-        super(name, id, salary);
+//         super(name, id, salary);
 
-        this.language = language;
-    }
+//         this.language = language;
+//     }
 
-    writeCode() {
-        console.log(
-            `${this.name} is writing ${this.language} code`
-        );
-    }
-}
+//     writeCode() {
+//         console.log(
+//             `${this.name} is writing ${this.language} code`
+//         );
+//     }
+// }
 
-class Manager extends Employee {
+// class Manager extends Employee {
 
-    constructor(name, id, salary, teamSize) {
+//     constructor(name, id, salary, teamSize) {
 
-        super(name, id, salary);
+//         super(name, id, salary);
 
-        this.teamSize = teamSize;
-    }
+//         this.teamSize = teamSize;
+//     }
 
-    conductMeeting() {
-        console.log(
-            `${this.name} is conducting a meeting`
-        );
-    }
-}
+//     conductMeeting() {
+//         console.log(
+//             `${this.name} is conducting a meeting`
+//         );
+//     }
+// }
 
-const developer = new Developer(
-    "Rahul",
-    101,
-    60000,
-    "JavaScript"
-);
+// const developer = new Developer(
+//     "Rahul",
+//     101,
+//     60000,
+//     "JavaScript"
+// );
 
-const manager = new Manager(
-    "Priya",
-    102,
-    90000,
-    10
-);
+// const manager = new Manager(
+//     "Priya",
+//     102,
+//     90000,
+//     10
+// );
 
-developer.login();
-developer.logout();
-developer.displayInfo();
+// developer.login();
+// developer.logout();
+// developer.displayInfo();
 
-developer.writeCode();
+// developer.writeCode();
 
-manager.login();
-manager.displayInfo();
+// manager.login();
+// manager.displayInfo();
 
-manager.conductMeeting();
+// manager.conductMeeting();

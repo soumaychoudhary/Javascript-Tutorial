@@ -46,9 +46,9 @@ object :- An object is an instance of a class. It contains specific values (prop
 // let obj=new Human(50,190,101);
 // console.log(obj.age);
 // obj.walking();
-// obj.privateFunction();
-
-// obj.modifyWeight(34);
+// // obj.privateFunction();
+// console.log(obj.fetchWeight);
+// obj.modifyWeight=34;
 // console.log(obj.fetchWeight);
 
 
@@ -63,7 +63,7 @@ methods like study(), attendClass()
 
 /**
 OOP is a programming approach where we organize data and behavior together using objects.
- */
+*/
 
 
 /*
@@ -82,47 +82,45 @@ Think of it as:
 // class BankAccount {
 
 //     #balance = 0;
-
 //     deposit(amount) {
 //         this.#balance += amount;
 //     }
-
 //     getBalance() {
 //         return this.#balance;
 //     }
 // }
 
-// const account = new BankAccount();
+// const soumay = new BankAccount();
 
-// account.deposit(500);
+// soumay.deposit(500);
 
-// console.log(account.getBalance());
+// console.log(soumay.getBalance());
 
 
 /////////////////////////////  getter and setter //////////////////////////////////////
-class Student {
+// class Student {
 
-    constructor(name, marks) {
-        this.name = name;
-        this.marks = marks;
-    }
+//     constructor(name, marks) {
+//         this.name = name;
+//         this.marks = marks;
+//     }
 
-    get result() {
-        return this.marks >= 40 ? "Pass" : "Fail";
-    }
+//     get result() {
+//         return this.marks >= 40 ? "Pass" : "Fail";
+//     }
 
-    set studentMarks(value) {
-        if (value >= 0 && value <= 100) {
-            this.marks = value;
-        }
-    }
-} 
+//     set studentMarks(value) {
+//         if (value >= 0 && value <= 100) {
+//             this.marks = value;
+//         }
+//     }
+// } 
 
-const student = new Student("Rahul", 80);
+// const student = new Student("Rahul", 80);
 
-console.log(student.result);
+// console.log(student.result);
 
-student.studentMarks = 90;
+// student.studentMarks = 90;
 
 
  

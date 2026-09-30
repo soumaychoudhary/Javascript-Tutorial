@@ -1,4 +1,3 @@
-function utility(name="soumay",age=getAge()){
-    console.log(name," ",age);
-}
-utility();
+ #privateFunction() {
+        console.log("This is a private function");
+    }
