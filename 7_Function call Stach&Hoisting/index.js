@@ -2,47 +2,47 @@
 ########################  hoisting ########################### 
      Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their scope before execution. 
      This means you can use functions and variables before declaring them.
+*/
 
+// sayMyName("babbar");
+// function sayMyName(finalName){
+//     console.log(finalName);
+// }
 
-sayMyName("babbar");
-function sayMyName(finalName){
-    console.log(finalName);
-}
-
-console.log(age);
-var age=25;
-
+// console.log(age);
+// var age=25;
+/*
 let and const are hoisted but stay in a Temporal Dead Zone (TDZ) until assigned a value.
 Unlike var, they do not get initialized with undefined.
 
 
 function hoisting cannot be done using function expression
+*/
+// sayHello();
+// let sayHello=function(){
+//     console.log("hello jee,kaise ho aap sab")
+// }
 
-sayHello();
-let sayHello=function(){
-    console.log("hello jee,kaise ho aap sab")
-}
-
-
+/*
 5. Summary Table
-        Feature	          Hoisted?	Initialized?	  Usable Before Declaration?
-            var	             ✅ Yes	   ✅ undefined	  ✅ Yes (But undefined)
-            let	             ✅ Yes	   ❌ No	          ❌ No (TDZ Error)
-        const	             ✅ Yes	   ❌ No	          ❌ No (TDZ Error)
-    Function Declaration     ✅ Yes	   ✅ Yes          ✅ Yes
-    Function Expression	     ✅ Yes	   ❌ No	          ❌ No
+        Feature	            Hoisted?	    Initialized?	     Usable Before Declaration?
+            var	             ✅ Yes	   ✅ undefined	      ✅ Yes (But undefined)
+            let	             ✅ Yes	   ❌ No	              ❌ No (TDZ Error)
+        const	             ✅ Yes	   ❌ No	              ❌ No (TDZ Error)
+    Function Declaration     ✅ Yes	   ✅ Yes              ✅ Yes
+    Function Expression	     ✅ Yes	   ❌ No	              ❌ No
 
 
 class hoisting  is also not possible .
+*/
+// const object1=new Human();
+// class Human{
 
-const object1=new Human();
-class Human{
-
-}
-
-
+// }
 
 
+
+/*
 
 ######################### function callstack #############################
 
@@ -91,11 +91,11 @@ why functions is called first class citizion in javascript
 
 // Returned from other functions
 
-function solve(number){
-    return function(number){
-        return number*number;
-    }
-}
+// function solve(number){
+//     return function(number){
+//         return number*number;
+//     }
+// }
 
 // let ans=solve(5);
 // let finalAns=ans(10);
