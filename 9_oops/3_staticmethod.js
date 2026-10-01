@@ -8,7 +8,7 @@ A static method is a method that belongs to the class rather than its individual
  */
 
 class Car {
-  static engine = 'four stroke'
+  static engine = 'four stroke';
   constructor(name) {
     this.name = name;
   }
@@ -21,8 +21,7 @@ const myCar = new Car("Ford");
 
 // You can call 'hello()' on the Car Class:
 console.log(Car.hello());
-console.log(Car.engine)
-
+console.log(Car.engine);
 // But NOT on a Car Object:
 // console.log(myCar.hello());
 // this will raise an error.

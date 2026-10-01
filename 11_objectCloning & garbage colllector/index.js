@@ -45,11 +45,11 @@
 
   // using iteration
 
-//   let src={
-//     age:12,
-//     wt:68,
-//     ht:180,
-// };
+let src={
+    age:12,
+    wt:68,
+    ht:180,
+};
 // let dest={};
 // for(let key in src){
 //     let newKey=key;

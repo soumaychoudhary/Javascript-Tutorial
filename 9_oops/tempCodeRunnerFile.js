@@ -1,3 +1,2 @@
- #privateFunction() {
-        console.log("This is a private function");
-    }
+
+// You can call 'hello()' on the Car Class:

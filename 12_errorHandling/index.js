@@ -44,12 +44,12 @@
 // lets create a custom error
  
 
-try{
-    // reference error
-    console.log(x);
-}
-catch(err){
-    throw new Error("declare error first");
-}
+// try{
+//     // reference error
+//     console.log(x);
+// }
+// catch(err){
+//     throw new Error("declare error first");
+// }
 
 

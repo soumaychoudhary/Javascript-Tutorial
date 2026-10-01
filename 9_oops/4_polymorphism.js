@@ -30,43 +30,39 @@ Suppose you tell:
 
 */
 
-class Payment {
+// class Payment {
+//     pay() {
+//         console.log("Processing payment");
+//     }
+// }
 
-    pay() {
-        console.log("Processing payment");
-    }
-}
+// class CreditCard extends Payment {
+//     pay() {
+//         console.log("Payment through Credit Card");
+//     }
+// }
 
-class CreditCard extends Payment {
+// class UPI extends Payment {
+//     pay() {
+//         console.log("Payment through UPI");
+//     }
+// }
 
-    pay() {
-        console.log("Payment through Credit Card");
-    }
-}
+// class Cash extends Payment {
+//     pay() {
+//         console.log("Payment through Cash");
+//     }
+// }
 
-class UPI extends Payment {
+// const payments = [
+//     new CreditCard(),
+//     new UPI(),
+//     new Cash()
+// ];
 
-    pay() {
-        console.log("Payment through UPI");
-    }
-}
-
-class Cash extends Payment {
-
-    pay() {
-        console.log("Payment through Cash");
-    }
-}
-
-const payments = [
-    new CreditCard(),
-    new UPI(),
-    new Cash()
-];
-
-payments.forEach(payment => {
-    payment.pay();
-});
+// payments.forEach(payment => {
+//     payment.pay();
+// });
 
 /**
                       pay()
@@ -100,6 +96,8 @@ Suppose we have a bank account. The balance should not be directly accessible to
 
 
 /**
+home task
+
 BankAccount
 │
 ├── accountNumber
